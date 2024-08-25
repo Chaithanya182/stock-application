@@ -15,7 +15,7 @@ class App extends Component {
     holdings: {},
     selectedStock: null,
     quantity: 1,
-    error: "", // New state variable for error messages
+    error: "", 
   };
 
   componentDidMount() {
@@ -36,7 +36,7 @@ class App extends Component {
   };
 
   handleSelectStock = (stock) => {
-    this.setState({ selectedStock: stock, error: "" }); // Clear error on stock selection
+    this.setState({ selectedStock: stock, error: "" }); 
   };
 
   handleQuantityChange = (e) => {
@@ -67,7 +67,7 @@ class App extends Component {
 
       if (quantity > currentQuantity) {
         this.setState({ error: "Insufficient quantity to sell." });
-        return; // Exit the function early if there's an error
+        return; 
       }
 
       const newQuantity = Math.max(0, currentQuantity - quantity);
@@ -80,7 +80,7 @@ class App extends Component {
 
       this.setState({
         holdings: updatedHoldings,
-        error: "", // Clear error on successful sell
+        error: "",
       });
     }
   };
@@ -103,7 +103,7 @@ class App extends Component {
           <HoldingsTable holdings={holdings} stocks={stocks} />
         </div>
         {error && <div className="error-message">{error}</div>}{" "}
-        {/* Display error message */}
+       
       </div>
     );
   }
