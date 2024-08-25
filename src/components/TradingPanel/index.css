@@ -1,0 +1,110 @@
+.trading-panel {
+  background: #1e1e3d;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.trading-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.trading-panel-title {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cyber-line {
+  height: 2px;
+  background: #00ffff;
+  margin: 10px 0;
+}
+
+.trading-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.neon-text {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.trading-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.trading-actions input {
+  flex: 1;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  border-radius: 20px;
+  font-family: "Orbitron", sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.trading-actions input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.trading-actions button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-btn {
+  background-color: #00ff00;
+}
+
+.sell-btn {
+  background-color: #ff0000;
+}
+
+.trading-actions button:hover {
+  box-shadow: 0 0 15px currentColor;
+}
+
+.trading-actions button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: rotate(-45deg);
+  transition: left 0.5s ease;
+}
+
+.trading-actions button:hover::after {
+  left: 150%;
+}
+
+.select-prompt {
+  color: #ff00ff;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
